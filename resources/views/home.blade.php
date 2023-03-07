@@ -58,7 +58,7 @@
             <li><a href="https://www.facebook.com/D.Abdellah.Aarab" class="text-white">Follow on Facebook</a></li>
             <li><a href="https://github.com/abdellahaarab" class="text-white">Follow on Github</a></li>
             <li><a href="https://twitter.com/deepxculture" class="text-white">Follow on Twitter</a></li>
-            <li><a href="{{ @route('profile') }}" class="text-white">Profile</a></li>
+            <li><a href="{{ @route('me.profile') }}" class="text-white">Profile</a></li>
           </ul>
         </div>
       </div>

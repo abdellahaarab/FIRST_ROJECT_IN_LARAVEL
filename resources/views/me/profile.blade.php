@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Profile</title>
-</head>
-<body>
-    <div>
-        <center>
-            My Profile !!
-        </center>
-    </div>
-</body>
+@extends('base')
 
-</html>
+@section('continue')
+<div class="container mt-5">
+    Welcome back Mr.
+    @isset($user )
+        {{ $user }}
+    @endisset
+</div>
+@endsection
