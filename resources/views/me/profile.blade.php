@@ -2,9 +2,9 @@
 
 @section('continue')
 <div class="container mt-5">
-    Welcome back Mr.
-    @isset($user )
-        {{ $user }}
-    @endisset
+    Welcome back Mr. {{ $session() }}
+    {{-- @if($session()->has('user'))
+        {{ "ghfkjhf" }}
+    @endif --}}
 </div>
 @endsection

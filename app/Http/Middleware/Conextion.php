@@ -27,11 +27,11 @@ class Conextion
         $password = $request->input('password');
         foreach(self::$users as $user):
             if($user['name'] === $name and $user['pass'] === $password){
-
-                return $next($request,['user'=>$name]);
+                session(['user'=>$name]);
+                return $next($request);
             }
         endforeach;
-
+        session()->forget('user');
         // return redirect()->route('me.login')->with('message',  $name);
         return redirect()->route('me.login')->with('message', 'Password not correctly!!!');
     }
