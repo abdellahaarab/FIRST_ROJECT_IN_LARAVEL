@@ -6,9 +6,9 @@
     <div class="mt-5">
         <div class="container">
             <div class="text-center my-5">
-                <h1 class="m-5">List Des Notes</h1> 
+                <h1 class="m-5">List Des Notes</h1>
             </div>
-            
+
             <table class="table mt-3">
                 <thead class="table-dark">
                     <tr>
@@ -24,18 +24,19 @@
                         @php
                             $cpt = $cpt + 1;
                         @endphp
-                        @if ($cpt%2 == 0)
+                        @if ($loop->odd)
                             <tr class="table-dark">
                                 <td>{{ $key  }}</td>
                                 <td>{{ $note  }}</td>
                             </tr>
-                        @else
+                        @endif
+                        @if ($loop->even)
                             <tr class="table-light">
                                 <td>{{ $key  }}</td>
                                 <td>{{ $note  }}</td>
-                            </tr>                        
+                            </tr>
                         @endif
-                       
+
                     @endforeach
                 </tbody>
             </table>

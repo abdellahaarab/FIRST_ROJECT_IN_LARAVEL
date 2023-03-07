@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,5 @@ Route::get('/notes', [HomeController::class,'lesNotes'])->name('all');
 Route::get('/notes/statistiques', [HomeController::class,'statistiques'])->name('statistiques');
 Route::get('/notes/show', [HomeController::class,'show'])->name('show');
 Route::get('/notes/decorate', [HomeController::class,'decorate'])->name('decorate');
+
+Route::get('/me/', [MeController::class,'profile'])->name('profile');
