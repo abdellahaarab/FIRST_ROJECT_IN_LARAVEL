@@ -40,10 +40,10 @@
       }
     </style>
 
-    
+
   </head>
   <body>
-    
+
 <header>
   <div class="collapse bg-dark" id="navbarHeader">
     <div class="container">
@@ -58,6 +58,7 @@
             <li><a href="https://www.facebook.com/D.Abdellah.Aarab" class="text-white">Follow on Facebook</a></li>
             <li><a href="https://github.com/abdellahaarab" class="text-white">Follow on Github</a></li>
             <li><a href="https://twitter.com/deepxculture" class="text-white">Follow on Twitter</a></li>
+            <li><a href="{{ @route('me.profile') }}" class="text-white">Profile</a></li>
           </ul>
         </div>
       </div>
@@ -260,6 +261,6 @@
 
     <script src="bootstrap/js/bootstrap.bundle.min.js" ></script>
 
-      
+
   </body>
 </html>
