@@ -20,5 +20,5 @@ Route::get('/notes', [HomeController::class,'lesNotes'])->name('all');
 Route::get('/notes/statistiques', [HomeController::class,'statistiques'])->name('statistiques');
 Route::get('/notes/show', [HomeController::class,'show'])->name('show');
 Route::get('/notes/decorate', [HomeController::class,'decorate'])->name('decorate');
-Route::get('/me', [MeController::class,'profile'])->name('me.profile')->middleware('Conextion');
+Route::match(['get','post'],'/me', [MeController::class,'profile'])->name('me.profile')->middleware('Conextion');
 Route::get('/me/login', [MeController::class,'login'])->name('me.login');

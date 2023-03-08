@@ -7,8 +7,10 @@
 @endif
 
 <div class="container mt-5">
-<form action="{{ @route('me.profile') }}" method="get">
+<form action="{{ @route('me.profile') }}" method="post" enctype="multipart/form-data">
     @csrf
+    {{-- <input type="hidden" name="_token" value="{{ csrf_token() }}"> --}}
+    {{-- {{ csrf_field() }} --}}
     <fieldset>
       <legend>Log in</legend>
       <div class="mb-3">
